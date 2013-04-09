@@ -1,0 +1,110 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>QA Engineer Test</title>
+<meta name="description" content=" " />
+<style type="text/css">
+BODY {
+  background-color: FFFFFF;
+	padding: 50px 25px 25px 25px;
+	}
+.header   {
+	font-size :32px;
+	letter-spacing: 1.5px;
+	font-weight:800;
+	font-family: "Arial", sans-serif;
+	text-align: left;
+	color: #000000;
+}
+P  {
+	font-size :20px;
+	letter-spacing: 1.5px;
+	font-family: "Arial", sans-serif;
+	text-align: left;
+	color: #000000;
+}
+.input {
+	font-family:"Arial", sans-serif;
+	height:35px;
+	border:0px;
+	background-color:#e3e3e3;
+	width:400px;
+	margin:0px;
+	padding:0px;
+	padding-left:7px;
+	font-size:13px;
+	letter-spacing:1.5px;
+	color:#666;
+	outline: none;
+}
+.button {
+	font-family:"Arial", sans-serif;
+	height:35px;
+	border:solid 1px #ccc;
+	background-color:#FFFFFF;
+	width:120px;
+	margin:0px;
+	padding:0px;
+	padding-left:7px;
+	font-size:13px;
+	letter-spacing:1.5px;
+	color:#666;
+	outline: none;
+}
+.button:hover {
+	border:solid 1px #666;
+}
+.results   {
+	font-size :20px;
+	letter-spacing: 1.5px;
+	font-family: "Arial", sans-serif;
+	text-align: center;
+	color: #000000;
+}
+.quiz {
+	width: 550px;
+	margin-right: auto;
+	margin-left: auto;
+}
+</style>
+
+<script type="text/javascript">
+    function alphaFrequency() {
+		var input = document.countfreq.input.value;
+		input = input.toLowerCase();
+		var output = '';
+		var alpha = new Array(); 
+		var count = new Array();
+		for (i=0; i<1; i++) {
+			alpha[i] = String.fromCharCode(i+97);
+			count[i] = 0;
+			var startNum = 0;
+			while (input.indexOf(alpha[i],startNum) > -1) {
+				count[i]++;
+				startNum = input.indexOf(alpha[i],startNum) + 1;
+			}
+			output += alpha[i] + ' =';
+			if      (count[i] <  10) { output += '&nbsp;&nbsp;' }
+			else if (count[i] < 100) { output += '&nbsp;' }
+			output += count[i];
+		}
+		if (document.getElementById && document.createElement) {
+			document.getElementById('results').innerHTML = output;
+			document.countfreq.input.select();
+		}
+	}
+	</script>
+</head>
+
+<body>
+
+<DIV class="quiz">
+<DIV class="header">QA Engineer Interview Question</DIV>
+<P>Below is a text input box and a button labeled "Count the A's" which, when pressed, computes the number of A's in your test string. Come up with a list of input strings you would want to test.</P>
+<form name="countfreq" method="post" action="#">
+<input class="input" type="text" name="input" id="input" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Enter a string to test.':this.value;" value="Enter a string to test." />
+<input class="button" type="submit" name="button" value="Count the A's" onclick="alphaFrequency(); return false;" />
+</form><div class="results" id="results"></div>
+</div>
+
+</body>
+</html>
