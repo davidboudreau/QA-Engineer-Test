@@ -1,7 +1,7 @@
 QA-Engineer-Test
 ================
 
-I created this test to gauge the aptitude of potential QA Engineer applicants. The intent is to find out whether the applicant is more than just bright and creative and whether they have a knack for testing. I was looking for an innate curiousity about how things are built and what combinations of variables and configurations are interesting to test. I was looking for a strong sense of how things should work and the ability to articulate it. The question: Come up with a list of input strings you would want to test. 
+I created this test to gauge the aptitude of potential QA Engineer applicants. The intent is to find out whether the applicant is more than just bright and creative and whether they have a knack for testing. I was looking for an innate curiousity about how things are built and what combinations of variables and configurations are interesting to test. I was also looking for a strong sense of how things should work and the ability to articulate it. The question: Come up with a list of input strings you would want to test. 
 
 1) An actual word like "banana"   
 2) "A" vs "a" - case shouldn't matter   
